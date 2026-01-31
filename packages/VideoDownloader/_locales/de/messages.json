@@ -1,0 +1,11 @@
+{
+   "ext_description": {
+      "message": "Video Downloader ist eine kostenlose und nützliche Browsererweiterung zum Herunterladen von Online-Videos"
+   },
+   "ext_name": {
+      "message": "Kostenloser Video-Downloader"
+   },
+   "ext_short_name": {
+      "message": "Downloader"
+   }
+}

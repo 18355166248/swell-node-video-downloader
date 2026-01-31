@@ -1,0 +1,11 @@
+{
+   "ext_description": {
+      "message": "Video Downloader 是一款免费且实用的浏览器扩展，用于下载在线视频"
+   },
+   "ext_name": {
+      "message": "免费视频下载器"
+   },
+   "ext_short_name": {
+      "message": "视频下载器"
+   }
+}

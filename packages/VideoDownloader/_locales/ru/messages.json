@@ -1,0 +1,11 @@
+{
+   "ext_description": {
+      "message": "Video Downloader - бесплатное и полезное расширение браузера для загрузки онлайн-видео"
+   },
+   "ext_name": {
+      "message": "Бесплатный загрузчик видео"
+   },
+   "ext_short_name": {
+      "message": "загрузчик"
+   }
+}

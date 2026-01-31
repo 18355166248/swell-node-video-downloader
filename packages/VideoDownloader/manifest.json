@@ -1,0 +1,42 @@
+{
+   "action": {
+      "default_icon": "img/icon64.png",
+      "default_popup": "popup/popup.html",
+      "default_title": "video downloader"
+   },
+   "background": {
+      "service_worker": "background.js"
+   },
+   "content_scripts": [ {
+      "js": [ "contentScript.js" ],
+      "matches": [ "http://*/*", "https://*/*" ],
+      "run_at": "document_end"
+   } ],
+   "declarative_net_request": {
+      "rule_resources": [ {
+         "enabled": true,
+         "id": "ruleset_1",
+         "path": "rules.json"
+      } ]
+   },
+   "default_locale": "en",
+   "description": "__MSG_ext_description__",
+   "host_permissions": [ "\u003Call_urls>" ],
+   "icons": {
+      "128": "img/icon128.png",
+      "16": "img/icon16.png",
+      "24": "img/icon24.png",
+      "64": "img/icon64.png"
+   },
+   "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAox8YGS1wIcV+TKuQpA2MvqWvB9ZwAgGL3bjmkhKr9ZP0RECSdJutmq3Kcz0VTxBGAm5Q2ySMrgXD3JrROpg3WYudY3re+sTrlrZ8FkJn3M1lWLAQ0/h6DKNPtCLIY5no385ifnEGcJ3+pGlnJCj4baTRztfDgiW/MC8/SNOuJ4bn8YvhjSMSPC6EhI+a/dLBjOHXUhQ6oa1p4fPjCfOrKBINHMP0y9ikABphLGRzgMlaCF4pZ4fOeWBr6YyKGUUlAovDLclPG2jjMvdz/V/gug/XD0kqfvB2iuGldOlMfCGb7x0/y/QgMdAZOfjPP8CQLNfMQqIoJ6CLayy/c1xAcQIDAQAB",
+   "manifest_version": 3,
+   "name": "__MSG_ext_name__",
+   "permissions": [ "webRequest", "downloads", "scripting", "storage", "declarativeNetRequest" ],
+   "short_name": "__MSG_ext_short_name__",
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "0.0.24",
+   "web_accessible_resources": [ {
+      "matches": [ "\u003Call_urls>" ],
+      "resources": [ "pageScript.js", "vendor/ffmpeg-core.js", "vendor/ffmpeg-core.wasm", "vendor/ffmpeg-core.worker.js", "downloadDash.js" ]
+   } ]
+}

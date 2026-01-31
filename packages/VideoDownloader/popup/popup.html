@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Video Downloader</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="styles.css" type="text/css">
+</head>
+<body>
+<div id="app" class="popup-wrap">
+	<div class="main" >
+		<ul class="list-videos" id="content">
+			<li class="video-container" v-for="video in videos">
+				<div>
+					<span>{{ video.quality }} {{ video.type }}</span> <br/>
+					<b  v-if="video.formattedSize != '0B'" >{{ video.formattedSize }}</b> <br/>
+					<b class="time">{{ video.duration }}</b> <br/>
+				</div>
+				<div>
+					<video width="40" :poster="video.type == 'hls'||video.type == 'dash'?'images/video-player.png':''" v-on:loadeddata="metaData($event)">
+						<source :src="video.url">
+						Your browser does not support the video tag.
+					</video>
+				</div>
+				<div class="persent">
+					{{ video.persent?video.persent.substr(0,30):'' }}
+				</div>
+				<div class="btn-download" title="download video">
+					<span v-if="video.persent" v-on:click="closeVideo(video.key)" class="btna" title="stop download">⤫</span>
+					<span v-if="!video.persent" v-on:click="selectVideo(video.key)" class="btna" title="start download">⤓</span>
+				</div>
+			</li>
+		</ul>
+		<div class="list-videos hidden" :class="{ show: !isObjectEmpty(videos) }">
+			<div class="empty-container">
+				<div class="main-bottom-text" v-html="text">
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+</body>
+<script src="script/vue.js"></script>
+<script src="script/app.js"></script>
+</html>

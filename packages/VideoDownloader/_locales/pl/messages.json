@@ -1,0 +1,11 @@
+{
+   "ext_description": {
+      "message": "Video Downloader to bezpłatne i przydatne rozszerzenie przeglądarki do pobierania filmów online"
+   },
+   "ext_name": {
+      "message": "Darmowy program do pobierania wideo"
+   },
+   "ext_short_name": {
+      "message": "downloader"
+   }
+}

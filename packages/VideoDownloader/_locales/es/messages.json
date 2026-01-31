@@ -1,0 +1,11 @@
+{
+   "ext_description": {
+      "message": "Video Downloader es una extensión de navegador gratuita y útil para descargar videos en línea"
+   },
+   "ext_name": {
+      "message": "Descargador de videos gratis"
+   },
+   "ext_short_name": {
+      "message": "descargador"
+   }
+}

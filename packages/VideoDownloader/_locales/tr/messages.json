@@ -1,0 +1,11 @@
+{
+   "ext_description": {
+      "message": "Video Downloader, çevrimiçi videoları indirmek için ücretsiz ve kullanışlı bir tarayıcı uzantısıdır"
+   },
+   "ext_name": {
+      "message": "Bedava Video İndirici"
+   },
+   "ext_short_name": {
+      "message": "indirici"
+   }
+}
