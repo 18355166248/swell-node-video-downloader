@@ -26,7 +26,6 @@
     "axios": "^1.6.2",
     "m3u8-parser": "^4.8.0",
     "mpd-parser": "^1.0.1",
-    "fluent-ffmpeg": "^2.1.2",
     "cheerio": "^1.0.0-rc.12",
     "cors": "^2.8.5",
     "dotenv": "^16.3.1",

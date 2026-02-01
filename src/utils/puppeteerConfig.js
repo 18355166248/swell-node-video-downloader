@@ -105,6 +105,7 @@ export function getPuppeteerLaunchOptions(options = {}) {
       '--disable-setuid-sandbox',
       '--disable-dev-shm-usage',
       '--disable-blink-features=AutomationControlled',
+      '--mute-audio', // 默认静音模式
       ...args
     ],
     ...otherOptions

@@ -1,5 +1,9 @@
 import axios from 'axios';
 import { logger } from './logger.js';
+import { exec } from 'child_process';
+import { promisify } from 'util';
+
+const execAsync = promisify(exec);
 
 /**
  * 视频工具函数
@@ -188,3 +192,4 @@ export function extractFilename(url, defaultName = 'video') {
     return `${defaultName}.mp4`;
   }
 }
+

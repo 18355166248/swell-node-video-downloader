@@ -151,12 +151,13 @@ async function detectVideoUrlGeneric(url, options) {
       try {
         logger.info(`尝试点击按钮: ${buttonSelector}`);
         
-        // 等待按钮元素出现
+        // 等待按钮元素出现，使用配置的 timeout 或默认值
+        const buttonWaitTimeout = Math.min(options.timeout || 30000, 60000); // 最多等待60秒
         await page.waitForSelector(buttonSelector, { 
-          timeout: 10000,
+          timeout: buttonWaitTimeout,
           visible: true 
         }).catch(() => {
-          logger.warn(`未找到按钮元素: ${buttonSelector}`);
+          logger.warn(`未找到按钮元素: ${buttonSelector}，超时时间: ${buttonWaitTimeout}ms`);
         });
 
         // 检查按钮是否存在且可见
